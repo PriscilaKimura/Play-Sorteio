@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Lilita One', sans-serif;
+}
+
+body {
+  background-image: url('assets/fundo-dados.jpg');
+  object-fit: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 15%;
+  /* Ocupar toda a largura do contêiner pai */
+  height: 25vh;
+  /* Ocupar toda a altura da viewport, ajuste conforme necessário */
+  display: block;
+  margin: 20px auto;
+}
+
+
+h1 {
+  font-size: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #dc8f12, #dfdfe9, #dc8f12);
+  background-size: 200% 100%;
+  animation: pulso 5s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes pulso {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+div {
+  width: 50%;
+  /* largura desejada para a div */
+  max-width: 600px;
+  /* largura máxima opcional */
+  margin: 0 auto;
+  /* Isso centralizará horizontalmente a div */
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: #e6e6e6;
+  font-weight: lighter;
+  margin-top: 20px; /* Adiciona espaço acima do h2 */
+  margin-bottom: 20px; /* Adiciona espaço abaixo do h2 */
+}
+
+
+.inputMin,
+.inputMax {
+
+  text-align: center;
+  width: 220px;
+  height: 45px;
+  margin: 15px;
+  border-radius: 5px;
+  border: solid rgba(207, 207, 8, 0.959) 1.9px;
+  font-size: 20px;
+}
+
+#input-result {
+  text-align: center;
+  flex-direction: column;
+  width: 150px; /* Reduza o valor da largura conforme necessário */
+  height: 45px;
+  margin: 30px auto 15px;
+  /* Ajuste a margem superior para distanciar mais o input de resultado */
+  border-radius: 5px;
+  border: solid rgba(207, 207, 8, 0.959) 1.9px;
+  font-size: 20px;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: solid rgba(207, 207, 8, 0.959) 1.9px;
+  font-size: 20px;
+  background-image: linear-gradient(45deg, #8d5a1f, #eaeaeaa4);
+  /* Altere as cores conforme desejado */
+  color: rgb(20, 18, 18);
+  /* Defina a cor do texto */
+  cursor: pointer;
+
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+@media (max-width: 1050px) {
+  h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .inputMin,
+  .inputMax,
+  #input-result {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto 15px; /* Adiciona margem na parte inferior para criar espaço entre os inputs */
+    display: block;
+  }
+
+  button {
+    width: 60%; /* Reduz a largura do botão para 60% do contêiner pai */
+    max-width: 200px; /* Define uma largura máxima para o botão */
+    margin: 0 auto 20px; /* Adiciona margem na parte inferior para criar espaço abaixo do botão */
+    display: block;
+  }
+}
